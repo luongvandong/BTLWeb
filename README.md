@@ -4,7 +4,7 @@ https://giaphiep.com/
 
 _Là bản dịch của trang chủ laravel.com gồm bản 5.5, 5.4, 5.3 nhưng vẫn còn một số phần chưa dịch xong nên nếu không thấy có phần nào thì có thể xem phần đó ở bản cũ hơn_
 
-_ 3 bản laravel này chỉ khác nhau một số chi tiết nhỏ , có thể dùng thử code ở bản cũ cho bản mới hơn_
+_3 bản laravel này chỉ khác nhau một số chi tiết nhỏ , có thể dùng thử code ở bản cũ cho bản mới hơn_
 
 https://laravel.com/docs/5.5
 
