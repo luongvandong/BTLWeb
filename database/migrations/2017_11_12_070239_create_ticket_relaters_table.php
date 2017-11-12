@@ -16,7 +16,15 @@ class CreateTicketRelatersTable extends Migration
         Schema::create('ticket_relaters', function (Blueprint $table) {
             $table->integer('ticket_id')->unsigned();
             $table->integer('employee_id')->unsigned();
+
+            // khóa chính
+
             $table->primary(['ticket_id','employee_id']);
+
+            //khóa nogài
+
+            $table->foreign('ticket_id')->references('id')->on('tickets')->onDelete('cascade');
+            $table->foreign('employee_id')->references('id')->on('employees')->onDelete('cascade');
         });
     }
 

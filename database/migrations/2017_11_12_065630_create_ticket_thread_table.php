@@ -21,6 +21,11 @@ class CreateTicketThreadTable extends Migration
             $table->tinyInteger('type')->nullable();
             $table->string('note')->nullable();
             $table->timestamps();
+
+            // khóa ngoài
+
+            $table->foreign('ticket_id')->references('id')->on('tickets')->onDelete('cascade');
+            $table->foreign('employee_id')->references('id')->on('employees')->onDelete('cascade');
         });
     }
 

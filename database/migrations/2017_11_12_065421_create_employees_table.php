@@ -23,6 +23,10 @@ class CreateEmployeesTable extends Migration
             $table->integer('team_id')->unsigned();
             $table->rememberToken();
             $table->timestamps();
+
+            // khóa ngoài
+
+            $table->foreign('team_id')->references('id')->on('teams')->onDelete('cascade');
         });
     }
 

@@ -28,6 +28,12 @@ class CreateTicketsTable extends Migration
             $table->datetime('closed_at')->nullable();
             $table->timestamps();
             $table->datetime('deleted_at')->nullable();
+
+            // khóa ngoài
+
+            $table->foreign('created_by')->references('id')->on('employees')->onDelete('cascade');
+            $table->foreign('assigned_to')->references('id')->on('employees')->onDelete('cascade');
+            $table->foreign('team_id')->references('id')->on('teams')->onDelete('cascade');
         });
     }
 
