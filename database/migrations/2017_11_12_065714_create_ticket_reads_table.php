@@ -17,6 +17,16 @@ class CreateTicketReadsTable extends Migration
             $table->integer('ticket_id')->unsigned();
             $table->integer('reader_id')->unsigned();
             $table->tinyInteger('status')->default(0);
+
+            // khoá chính
+
+            $table->primary(['ticket_id','reader_id']);
+
+            // khóa ngoài
+
+            $table->foreign('ticket_id')->references('id')->on('tickets')->onDelete('cascade');
+            $table->foreign('reader_id')->references('id')->on('employees')->onDelete('cascade');
+
         });
     }
 
