@@ -18,7 +18,7 @@ class CreateEmployeesTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('url_image')->nullabe();
+            $table->string('url_image')->nullable();
             $table->tinyInteger('role');
             $table->integer('team_id')->unsigned();
             $table->rememberToken();
