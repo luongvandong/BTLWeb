@@ -37,10 +37,10 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">TRANG CHỦ</a>
+              <a class="nav-link js-scroll-trigger" href="">TRANG CHỦ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">ĐĂNG KÝ</a>
+              <a class="nav-link js-scroll-trigger" href="signup">ĐĂNG KÝ</a>
             </li>
           </ul>
         </div>
@@ -58,7 +58,7 @@
           </div>
           <div class="col-lg-8 mx-auto">
             <p class="text-faded mb-5">My Work là một ứng dụng giúp bạn quản lý các công việc được của bạn một cách hiểu quả nhất!</p>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">ĐĂNG NHẬP</a>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="login">ĐĂNG NHẬP</a>
           </div>
         </div>
       </div>
