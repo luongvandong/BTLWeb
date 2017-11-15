@@ -37,7 +37,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="">TRANG CHỦ</a>
+              <a class="nav-link js-scroll-trigger" href="/home">TRANG CHỦ</a>
             </li>
             @guest
             <li class="nav-item">
