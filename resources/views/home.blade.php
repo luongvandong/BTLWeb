@@ -37,11 +37,15 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">TRANG CHỦ</a>
+              <a class="nav-link js-scroll-trigger" href="">TRANG CHỦ</a>
             </li>
             @guest
             <li class="nav-item">
+<<<<<<< HEAD
               <a class="nav-link js-scroll-trigger" href="{{ route('register') }}">ĐĂNG KÝ</a>
+=======
+              <a class="nav-link js-scroll-trigger" href="signup">ĐĂNG KÝ</a>
+>>>>>>> refs/remotes/origin/form_signup_login
             </li>
               <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="{{ route('password.request') }}">QUÊN MẬT KHẨU</a>
@@ -77,10 +81,15 @@
             <hr>
           </div>
           <div class="col-lg-8 mx-auto">
+<<<<<<< HEAD
             <p class="text-faded mb-5">My Work là một ứng dụng giúp bạn quản lý các công việc được của bạn một cách hiệu quả nhất!</p>
             @guest
               <a class="btn btn-primary btn-xl js-scroll-trigger" href="{{ route('login') }}">ĐĂNG NHẬP</a>
             @endguest
+=======
+            <p class="text-faded mb-5">My Work là một ứng dụng giúp bạn quản lý các công việc được của bạn một cách hiểu quả nhất!</p>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="login">ĐĂNG NHẬP</a>
+>>>>>>> refs/remotes/origin/form_signup_login
           </div>
         </div>
       </div>
