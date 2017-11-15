@@ -39,23 +39,29 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#about">TRANG CHỦ</a>
             </li>
+            @guest
             <li class="nav-item">
-              @guest
-                <a class="nav-link js-scroll-trigger" href="{{ route('register') }}">ĐĂNG KÝ</a>
-              @else
-                <a class="nav-link js-scroll-trigger" href="#">{{ \Auth::user()->name }}</a>
-                <a href="{{ route('logout') }}"
-                   class="nav-link js-scroll-trigger"
-                   onclick="event.preventDefault();
-                          document.getElementById('logout-form').submit();">
-                  Logout
-                </a>
-
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                  {{ csrf_field() }}
-                </form>
-              @endguest
+              <a class="nav-link js-scroll-trigger" href="{{ route('register') }}">ĐĂNG KÝ</a>
             </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="{{ route('password.request') }}">QUÊN MẬT KHẨU</a>
+              </li>
+            @else
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#">{{ \Auth::user()->name }}</a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ route('logout') }}"
+                 class="nav-link js-scroll-trigger"
+                 onclick="event.preventDefault();
+                          document.getElementById('logout-form').submit();">
+                THOÁT
+              </a>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                {{ csrf_field() }}
+              </form>
+            </li>
+            @endguest
           </ul>
         </div>
       </div>
