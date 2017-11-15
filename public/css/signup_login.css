@@ -46,4 +46,7 @@
 #mainNav .navbar-nav > li.nav-item > a.nav-link, #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
   color: rgba(255, 255, 255, .7);
 }
+.help-block strong{
+  color: orange;
+}
 

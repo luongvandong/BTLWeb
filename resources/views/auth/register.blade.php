@@ -22,6 +22,9 @@
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="{{ route('login') }}">ĐĂNG NHẬP</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="{{ route('password.request') }}">QUÊN MẬT KHẨU</a>
+                    </li>
                 </ul>
             </div>
         </div>

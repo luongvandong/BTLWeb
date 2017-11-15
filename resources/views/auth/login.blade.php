@@ -21,6 +21,9 @@
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="{{ route('register') }}">ĐĂNG KÝ</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="{{ route('password.request') }}">QUÊN MẬT KHẨU</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -60,13 +63,6 @@
                 </div>
 
                 <button type="submit" class="btn btn-primary btn-block">Đăng nhập</button>
-                <div class="row">
-                    <div class="link">
-                        <a class="btn btn-link" href="{{ route('password.request') }}">
-                            Quên mật khẩu?
-                        </a>
-                    </div>
-                </div>
 
             </form>
         </div>
