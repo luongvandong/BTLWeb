@@ -40,7 +40,21 @@
               <a class="nav-link js-scroll-trigger" href="#about">TRANG CHỦ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">ĐĂNG KÝ</a>
+              @guest
+                <a class="nav-link js-scroll-trigger" href="{{ route('register') }}">ĐĂNG KÝ</a>
+              @else
+                <a class="nav-link js-scroll-trigger" href="#">{{ \Auth::user()->name }}</a>
+                <a href="{{ route('logout') }}"
+                   class="nav-link js-scroll-trigger"
+                   onclick="event.preventDefault();
+                          document.getElementById('logout-form').submit();">
+                  Logout
+                </a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                  {{ csrf_field() }}
+                </form>
+              @endguest
             </li>
           </ul>
         </div>
@@ -57,8 +71,10 @@
             <hr>
           </div>
           <div class="col-lg-8 mx-auto">
-            <p class="text-faded mb-5">My Work là một ứng dụng giúp bạn quản lý các công việc được của bạn một cách hiểu quả nhất!</p>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">ĐĂNG NHẬP</a>
+            <p class="text-faded mb-5">My Work là một ứng dụng giúp bạn quản lý các công việc được của bạn một cách hiệu quả nhất!</p>
+            @guest
+              <a class="btn btn-primary btn-xl js-scroll-trigger" href="{{ route('login') }}">ĐĂNG NHẬP</a>
+            @endguest
           </div>
         </div>
       </div>

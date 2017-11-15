@@ -14,6 +14,10 @@
 Route::get('/', function () {
     return view('home');
 });
+Route::group(['prefix'=>'auth'],function (){
 
-Route::get('login', 'LoginController@getLogin');
-Route::post('login', 'LoginController@postLogin');
+    Auth::routes();
+
+});
+
+Route::get('/home', 'HomeController@index')->name('home');
