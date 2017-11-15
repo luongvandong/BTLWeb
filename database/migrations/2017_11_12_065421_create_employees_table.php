@@ -19,14 +19,14 @@ class CreateEmployeesTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('url_image')->nullable();
-            $table->tinyInteger('role');
-            $table->integer('team_id')->unsigned();
+            $table->tinyInteger('role')->default('1');
+            $table->integer('team_id')->unsigned()->nullable();
             $table->rememberToken();
             $table->timestamps();
 
             // khóa ngoài
 
-            $table->foreign('team_id')->references('id')->on('teams')->onDelete('cascade');
+            //$table->foreign('team_id')->references('id')->on('teams')->onDelete('cascade');
         });
     }
 

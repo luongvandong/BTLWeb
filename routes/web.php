@@ -14,11 +14,8 @@
 Route::get('/', function () {
     return view('home');
 });
-
-Route::get('/login', function() {
-	return view('login');
+Route::group(['prefix'=>'auth'],function (){
+    Auth::routes();
 });
 
-Route::get('/signup', function(){
-	return view('signup');
-});
+Route::get('/home', 'HomeController@index')->name('home');
